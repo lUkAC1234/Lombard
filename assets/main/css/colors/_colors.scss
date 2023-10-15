@@ -1,0 +1,15 @@
+$primary-color: #0862EE;
+$primary-hover-color: #0026EF;
+$block-gray-text: #788EC7;
+$white: #ffffff;
+$black: #202020;
+$gray-text: #72798C;
+
+:root {
+    --primary-color: #{$primary-color};
+    --primary-hover-color: #{$primary-hover-color};
+    --block-gray-text: #{$block-gray-text};
+    --white: #{$white};
+    --black: #{$black};
+    --gray-text: #{$gray-text};
+}

@@ -1,0 +1,12 @@
+@import "./pages/_layout";
+@import "./heplers/_import";
+@import "./colors/_layout";
+@import "./layout/_layout";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--opens);
+}
+

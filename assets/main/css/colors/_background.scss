@@ -1,0 +1,23 @@
+$block-gray: #F0F2FE;
+$block-gray-light: #CAD2FF;
+$button-stroke-white: #325488;
+$button-stroke-white-hover: #42679E;
+$gray-box-shadow: #D6DCFE;
+$block-extra-gray: #E0E1F9;
+
+$heading-main: #CFE5FF;
+$heading-second: #A7E9BE;
+$heading-extra: #CAD2FF;
+
+:root {
+    --block-gray: #{$block-gray};
+    --block-gray-light: #{$block-gray-light};
+    --button-stroke-white: #{$button-stroke-white};
+    --button-stroke-white-hover: #{$button-stroke-white-hover};
+    --gray-box-shadow: #{$gray-box-shadow};
+    --block-extra-gray: #{$block-extra-gray};
+
+    --heading-main: #{$heading-main};
+    --heading-second: #{$heading-second};
+    --heading-extra: #{$heading-extra};
+}
