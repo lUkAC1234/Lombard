@@ -4,13 +4,16 @@ main {
   margin: 0 auto;
 }
 
+.pdIn-8rem {
+  padding-inline: 8rem;
+}
+
 .heading-section {
   margin-top: 10rem;
 }
 
 .heading-container {
   display: flex;
-  padding-inline: 8rem;
 }
 
 .heading-text-column {
@@ -148,7 +151,7 @@ main {
 }
 
 .opportunities-container {
-  padding: 5rem 8rem;
+  padding-block: 5rem;
 }
 
 .opportunities-main-content {
@@ -272,7 +275,116 @@ main {
   font-weight: 400;
   margin-block: 1.5rem 1rem;
 }
-.primary-button, .heading-text-column .heading-btn-container .heading-btn, .opportunities-link-container .opportunities-link-content .opportunities-link-btn-container .opportunities-link-btn {
+.possibilities-section {
+  margin-bottom: 5rem;
+}
+
+.possibilities-article {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.possibilities-article .possibilities-article-title {
+  position: relative;
+  color: var(--black);
+  font-size: 2.25rem;
+  line-height: 110%;
+}
+.possibilities-article .possibilities-article-title::before {
+  position: absolute;
+  content: "";
+  width: 3.1rem;
+  height: 3.1rem;
+  left: -1.5rem;
+  top: -0.5rem;
+  background: var(--heading-main);
+  z-index: -1;
+}
+.possibilities-article .possibilities-article-title span {
+  color: var(--primary-color);
+}
+.possibilities-content-wrapper {
+  position: relative;
+  margin-top: 3rem;
+}
+
+.possibilities-content-changer-column {
+  position: absolute;
+  display: flex;
+  flex-flow: column;
+}
+.possibilities-content-changer-column .possibilities-content-changer {
+  text-align: start;
+  margin-block: 0.25rem;
+  width: min(100%, 27rem);
+}
+.possibilities-content-changer-column .possibilities-content-changer.active {
+  font-size: 1.4rem !important;
+  width: min(100%, 30rem);
+}
+
+.possibilities-content-column {
+  display: grid;
+  gap: 5rem;
+  margin-left: 29rem;
+  border-radius: 1.25rem;
+  padding: 3rem;
+  background-color: var(--block-gray);
+}
+
+.possibilities-content {
+  display: flex;
+  gap: 2rem;
+}
+.possibilities-content .possibilities-content-icon-container {
+  position: relative;
+  background: var(--block-extra-gray);
+  transform: rotate(45deg);
+  box-shadow: 0px 26px 44px -10px rgba(57, 81, 219, 0.27);
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+}
+.possibilities-content .possibilities-content-icon-container::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  transform: rotate(25deg);
+  z-index: -1;
+  background: var(--white);
+  border-radius: 0.625rem;
+  top: 0;
+  left: 0;
+}
+.possibilities-content .possibilities-content-icon-container i {
+  font-size: 3.5rem;
+  color: var(--primary-color);
+  transform: rotate(-45deg);
+}
+
+.possibilities-content-text-container .possibilities-content-title {
+  position: relative;
+  color: var(--black);
+  font-size: 1.5rem;
+  line-height: 120%;
+  padding-block: 1rem;
+}
+.possibilities-content-text-container .possibilities-content-title::before {
+  position: absolute;
+  content: "";
+  width: 2rem;
+  height: 0.3rem;
+  background-color: var(--primary-color);
+  border-radius: 1rem;
+  top: 0;
+}
+.possibilities-content-text-container .possibilities-content-text {
+  color: var(--black);
+  font-weight: 400;
+  line-height: 140%;
+}
+
+.primary-button, .heading-text-column .heading-btn-container .heading-btn, .opportunities-link-container .opportunities-link-content .opportunities-link-btn-container .opportunities-link-btn, .possibilities-article .possibilities-article-btn {
   border-radius: 0.625rem;
   background: var(--primary-color);
   color: var(--white);
@@ -280,12 +392,12 @@ main {
   font-size: 1.5rem;
   padding: 1rem 1.75rem;
 }
-.primary-button:hover, .heading-text-column .heading-btn-container .heading-btn:hover, .opportunities-link-container .opportunities-link-content .opportunities-link-btn-container .opportunities-link-btn:hover {
+.primary-button:hover, .heading-text-column .heading-btn-container .heading-btn:hover, .opportunities-link-container .opportunities-link-content .opportunities-link-btn-container .opportunities-link-btn:hover, .possibilities-article .possibilities-article-btn:hover {
   background: var(--primary-hover-color);
   box-shadow: 0px 10px 40px 0px rgba(0, 38, 239, 0.35);
 }
 
-.button-stroke, .nav-try-btn-container .nav-try-btn {
+.button-stroke, .nav-try-btn-container .nav-try-btn, .possibilities-content-changer-column .possibilities-content-changer {
   color: var(--primary-color);
   font-size: 1rem;
   font-weight: 700;
@@ -294,11 +406,11 @@ main {
   background: var(--white);
   padding: 0.88rem 1rem;
 }
-.button-stroke:hover, .nav-try-btn-container .nav-try-btn:hover {
+.button-stroke:hover, .nav-try-btn-container .nav-try-btn:hover, .possibilities-content-changer-column .possibilities-content-changer:hover {
   box-shadow: 0px 8px 30px 0px rgba(0, 38, 239, 0.25);
 }
 
-.button-stroke-white {
+.button-stroke-white, .possibilities-content-changer-column .possibilities-content-changer.active {
   color: var(--white);
   font-size: 1.25rem;
   font-weight: 700;
@@ -307,7 +419,7 @@ main {
   background: var(--button-stroke-white);
   padding: 1rem 1.75rem;
 }
-.button-stroke-white:hover {
+.button-stroke-white:hover, .possibilities-content-changer-column .possibilities-content-changer.active:hover {
   background: var(--button-stroke-white-hover);
   box-shadow: 0px 0px 30px 0px rgba(255, 255, 255, 0.15);
 }
@@ -323,10 +435,13 @@ button {
   text-decoration: none;
   border: none;
   outline: none;
-  cursor: pointer;
   transition: all 0.4s ease;
   font-style: normal;
   line-height: normal;
+}
+
+button {
+  cursor: pointer;
 }
 
 :root {
@@ -355,7 +470,7 @@ header {
   position: fixed;
   width: 100%;
   background: var(--white);
-  z-index: 10;
+  z-index: 100;
 }
 
 .navbar {
